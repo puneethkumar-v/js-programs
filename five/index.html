@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Attendence System</title>
+    <script src="src/controller/initialize.js"></script>
+    <script src="src/model/Employee.js"></script>
+    <script src="src/view/createEmployee.js"></script>
+    <script>
+      window.addEventListener('load', init.view.createEmployee.setupUI);
+    </script>
+  </head>
+  <body>
+    <h1>Employee Attendence System</h1>
+    <form id="Employee">
+      <p>
+        <label><strong>Employee Name: </strong> <input type="text" name="ename" /></label>
+      </p>
+      <p>
+        <label><strong>Employee ID: </strong> <input type="text" name="empid" /></label>
+      </p>
+      <p>
+        <label><strong>Date: </strong><input type="date" name="edate" /></label>
+      </p>
+      <p> <label><strong>Select Your Department</strong>
+         <select id="dept"> 
+        <option value="0">Select</option>
+        <option value="MCA">MCA</option>
+        <option value="Mechanical">Mechanical</option>
+        <option value="Computer Science">CS</option>
+        <option value="Electronics and Comunication">EC</option>
+        <option value="BioTech">BioTech</option>
+   </select><br><br</label></p>
+      <p>
+        <label><strong>Status: </strong><input type="radio" name="att" value="present" checked>Present</label>
+       <label> <input type="radio" name="att" value="absent">Absent</label>
+      </p>
+      <p><button type="button" name="commit">Save</button></p>
+    <button><a href="listEmployees.html">List Employees</a></button>
+    </form>
+   </body>
+</html>
